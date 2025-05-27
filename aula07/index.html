@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Nome e Endereço</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exibir nome e Endereço</h1>
+        <button onclick="mostrarInformacaoes()">Mostrar Nome e Endereço</button>
+        <p id="resultado"></p>
+    </div>
+
+    <div class="header">
+        <h1>Exibir Texto Digitado</h1>
+        <input type="text" id="textoDigitado" placeholder="Digite algo aqui">
+        <button onclick="apresentarTexto()">Exibir Texto</button>
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function mostrarInformacaoes(){
+            var nome = "João da Silva";
+            var endereco = "Rua das Flores, 123, São Paulo - SP - CEP 94834-40";
+            document.getElementById("resultado").textContent = `Nome: ${nome} | Endereço: ${endereco}`;
+        }
+        
+        function apresentarTexto(){
+            var text = document.getElementById("textoDigitado").value.trim();
+
+            if (text == "") {
+                document.getElementById("resultado").textContent = "Por favor, digite algo na caixa de texto.";
+            } else {
+                document.getElementById("resultado").textContent = `Você digitou: ${text}`;
+            }
+        }
+    </script>
+    
+</body>
+</html>

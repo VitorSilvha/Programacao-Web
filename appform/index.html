@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Alunos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Relatório de Resultados - Disciplina: JavaScript</h2>
+    <button onclick="gerarRelatorio()">Criar Relatório</button>
+
+    <div id="relatorio"></div>
+    <script>
+        function gerarRelatorio() {
+    const alunos = [];
+    for (let i = 1; i <= 20; i++) {
+        const nota = Math.floor(Math.random() * 101); // nota de 0 a 100
+        alunos.push({ nome: `Aluno ${i}`, nota });
+    }
+
+    let tabela = `
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Nota</th>
+            </tr>
+    `;
+
+    alunos.forEach(aluno => {
+        tabela += `
+            <tr>
+                <td>${aluno.nome}</td>
+                <td>${aluno.nota}</td>
+            </tr>
+        `;
+    });
+
+    tabela += `</table>`;
+
+    document.getElementById("relatorio").innerHTML = tabela;
+}
+    </script>
+</body>
+</html> 

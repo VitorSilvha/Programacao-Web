@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML – Formulários - Exemplo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>HTML – Formulários - Exemplo</h2>
+    <form id="formulario">
+        <label for="primeiroNome">Primeiro nome:</label>
+        <input type="text" id="primeiroNome" name="primeiroNome"><br><br>
+
+        <label for="ultimoNome">Último nome:</label>
+        <input type="text" id="ultimoNome" name="ultimoNome"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <input type="radio" id="masculino" name="genero" value="Masculino">
+        <label for="masculino">Masculino</label><br>
+
+        <input type="radio" id="feminino" name="genero" value="Feminino">
+        <label for="feminino">Feminino</label><br><br>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Redefinir</button>
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>
