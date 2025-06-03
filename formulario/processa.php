@@ -1,7 +1,10 @@
-<?php echo htmlspecialchars($_GET['primeiroNome'] ??''); ?>
+<?php 
+    $primeiroNome = $_GET['primeiroNome'];
 
-Último nome: <?php echo htmlspecialchars($_GET['ultimoNome'] ??''); ?>
+    $ultimoNome = $_GET['ultimoNome'];
 
-Email: <?php echo htmlspecialchars($_GET['email'] ??''); ?>
+    $email = $_GET['email'];
 
-Gênero: <?php echo htmlspecialchars($_GET['genero'] ??''); ?> 
+    $genero = $_GET['genero'];
+
+?>
